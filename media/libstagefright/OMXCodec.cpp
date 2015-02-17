@@ -363,6 +363,19 @@ void OMXCodec::findMatchingCodecs(
 uint32_t OMXCodec::getComponentQuirks(
         const sp<MediaCodecInfo> &info) {
     uint32_t quirks = 0;
+
+    if (info->hasQuirk("needs-flush-before-disable")) {
+	quirks |= kNeedsFlushBeforeDisable;
+    }
+    if (info->hasQuirk("requires-flush-complete-emulation")) {
+	quirks |= kReqiuresFlushCompleteEmulation;
+    }
+    if (info->hasQuirk("supports-multiple-frames-per-input-buffer")) {
+	quirks |= kSupportsMultipleFramesPerInputBuffer;
+    }
+    if (info->hasQuirk("requires-larger-encoder-output-buffer")) {
+	quirks |= kRequiresLargerEncoderOutputBuffer;
+    }
     if (info->hasQuirk("requires-allocate-on-input-ports")) {
         quirks |= kRequiresAllocateBufferOnInputPorts;
     }
