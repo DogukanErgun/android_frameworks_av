@@ -368,7 +368,7 @@ uint32_t OMXCodec::getComponentQuirks(
 	quirks |= kNeedsFlushBeforeDisable;
     }
     if (info->hasQuirk("requires-flush-complete-emulation")) {
-	quirks |= kReqiuresFlushCompleteEmulation;
+	quirks |= kRequiresFlushCompleteEmulation;
     }
     if (info->hasQuirk("supports-multiple-frames-per-input-buffer")) {
 	quirks |= kSupportsMultipleFramesPerInputBuffer;
