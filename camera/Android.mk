@@ -51,6 +51,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libcamera_metadata \
 
 LOCAL_C_INCLUDES += \
+	device/htc/shooteru/include \
 	system/media/camera/include \
 	system/media/private/camera/include \
 

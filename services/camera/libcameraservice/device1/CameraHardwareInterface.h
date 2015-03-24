@@ -731,7 +731,7 @@ private:
         mHalPreviewWindow.nw.enqueue_buffer = __enqueue_buffer;
         mHalPreviewWindow.nw.set_buffer_count = __set_buffer_count;
 #ifdef HTC_3D_SUPPORT
-        mHalPreviewWindow.nw.set_3d_mode = __set_3d_mode;
+        //mHalPreviewWindow.nw.set_3d_mode = __set_3d_mode;
 #endif
         mHalPreviewWindow.nw.set_buffers_geometry = __set_buffers_geometry;
         mHalPreviewWindow.nw.set_crop = __set_crop;
